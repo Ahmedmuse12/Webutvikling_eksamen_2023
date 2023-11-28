@@ -1,0 +1,631 @@
+/* Generelle stylerene*/
+/* jeg har mobile prinsippene først, også laget media querry for større skjermer*/
+/* jeg kommer å kommentere det jeg synes er nødvendig for å vise fortårelsen*/
+body {
+    font-family: Arial, sans-serif;  
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%; /* Dette sørger at bildene ikke går ut av plass. hverfal i sin container*/
+    height: auto;
+}
+/* Containeren begrenser maksimal bredde av innholdet til 1600px som oppgaven spør, dette gjør at vi har kontroll på sida og alt ikke går ut plass. */
+.container {
+    width: 100%; /* gjør at vi får bruke hele bredden som er 1600px */
+    max-width: 1600px; /*max som forklart på oppgaven */
+    margin: 0 auto; /* seneterer */
+  }
+
+/* Header Styler*/
+header {
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; 
+}
+
+header nav li {
+    margin: 7px 0;
+    
+}
+
+header nav a {
+    text-decoration: none;  /* starta å fjerne udnestreken på meny punktene*/
+    font-size: larger; 
+    font-weight: 200;
+    color: #000;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    text-decoration-color:#e6bd43; 
+    font-weight: 900; /* Gjør størelsen større ved hover som beskrevet i oppgaven*/
+}
+
+/* Logogoen på toppen og footer logoen. skrive koden et sted å slippe å skrive om igjen*/
+#logo .footer-logo {
+    max-width: 100px; 
+    margin-bottom: 20px;
+
+}
+
+/* Main Styler */
+main {
+    padding: 1em;
+}
+
+/* styles på hver seksjon sånn at dem blir sånn jeg vil*/
+/* dette er header sekjonen som jeg forstå som 'header omårde', oppgaven sier at jeg setter bakground bilde på header område, jeg antar at det er denne seksjonen, som jeg så på vedioen i eksamen, hadde læreren bakcgorund vedio på denne seksjonen. */
+.velkommenseksjon {
+    padding: 2em 0; 
+    background-image: url('ressurser/profilibackground.jpg');; /* bakgrunnsbilde som oppgaven sier, header område.*/
+    background-size: cover; /* Sørger for at bildet dekker hele seksjonen */
+    background-position: center; 
+    text-align: center; 
+    color: white; 
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/*styler for subheading seksjonen*/
+.subheading {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 4em 1em; 
+    text-align: center; 
+}
+.subheading h2 {
+    color: #333; 
+    margin-bottom: 1em; 
+}
+.subheading p {
+    color: #666; 
+    line-height: 1.6; 
+}
+
+
+/*styler "OmOss" seksjonen*/
+.about {
+    background-color: #e6bd43;
+    border: 2px solid black;
+    padding: 20px;
+    display: block;
+    margin: auto;
+}
+.about-image {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 20px; 
+}
+
+.about h3,
+.about p,
+.about .button {
+    margin-bottom: 10px; 
+}
+
+/* Våre tjenester-seksjonen */
+.our-tjernester {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.our-tjernester h2 {
+    margin-bottom: 20px;
+}
+
+.our-tjernester article {
+    margin-bottom: 10px; 
+}
+
+.our-tjernester h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px; 
+}
+
+.our-tjernester p {
+    font-size: 0.9em;
+}
+
+/* Registreringsfelt-stil som er nederst i hjemme siden.*/
+.signup-felt {
+    background-color: #252525; /* Gråsvart farge #252525 fra eksamens mappen, har brukt flere steder */
+    text-align: center;
+    padding: 40px 15px; 
+    margin-left: -16px;     
+    margin-right: -16px;
+}
+
+.signup-felt h2 {
+    margin-bottom: 10px; /* avstand under overskriften*/
+}
+.signup-felt form {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Legger til litt plass mellom input boksen og knapp */
+}
+
+.signup-felt input[type="email"], .signup-felt button {
+    padding: 8px 19px;
+}
+
+.signup-felt button {
+    background-color: #e6bd43; /* fargen er fra eksamens mappen og på Demo vedioen */
+    border: none;
+    padding: 8px 19px;
+    cursor: pointer;
+}
+.signup-felt button:hover{
+    background-color: #252525;
+    color:#e6bd43; 
+}
+
+
+/*Har samler jeg alle knappen for en felles stil for alle knapper*/
+.button, .about-text .button, nav ul li:last-child a, .job-button, .contact-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color:#e6bd43; 
+    color: #000; 
+    padding: 10px 20px;
+    border: 1px solid #000; /* Legger en solid ramme, det står ikke i oppgaven, men synes det ser mer klart med den*/
+    transition: all 0.3s ease; 
+}
+
+/*Felles hover for alle knapper*/
+.button:hover, .about-text .button:hover, nav ul li:last-child a:hover, .job-button:hover, .contact-button:hover{
+    background-color: black; 
+    color:#e6bd43; 
+}
+
+
+
+/* Products html styllen*/
+/* først seksjonen som er polifio intro*/
+.portfolio-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px; 
+    background-image: url('ressurser/profilibackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 50px;
+    color: black; 
+    margin-left: -15px;  /* har satt margin left og right på - 15px fordi bilden dekke ikke helle siden, og har gjort sånn på alle bildene jeg har i siden */
+    margin-right: -15px;
+}
+.portfolio-intro h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+ /*Har sammler tittlene som har felles underfarge og størrelse for produkt siden min*/
+.job-item h2, .previous-jobs h2, #branding h2, #design h2, #development h2 {
+    font-size: 1.2rem; 
+    color: #333; 
+    position: relative;
+    border-bottom: 2px solid #ffd700; 
+    font-weight: 900;
+    margin-bottom: 30px;  /* Har gir jeg title til hver seksjn plass under for når det zommes at bilden ikke rører skriften */
+}
+
+ /* Artikkelkortbeholdere seksjon */
+.Artikkelkortbeholder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card img {
+    width: 90%; /* Reduserer bredden til mindre enn 100% for å gi plass til transition */
+    height: auto;
+    margin: auto 25px; 
+    display: block;
+    transition: transform 0.3s ease;
+    max-width: 692px; /* Setter maksimal bredde */
+    min-width: 200px;
+   
+}
+.card img:hover {
+    transform: scale(1.05); 
+    transform-origin: center;
+}
+  
+ 
+/* Styler for Om-Oss siden*/
+.company-section {
+    background-image: url('ressurser/minaboutbackgroun.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  /*Om firmaen, dette er først seksjonen i om oss siden*/
+  .company-info {
+    background: white; /*hvit bakgrunds farge*/
+    padding: 20px;
+    max-width: 500px; 
+    margin: 0 auto; 
+    margin-right: 19px;
+    color: black;
+  }
+  .company-info h2 {
+    margin-top: 0;
+  }
+
+
+
+/*Services seksjonen, vi har to services men den har er i om oss siden*/
+.services {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+/*styller for i elemtneen som er fonts, har har jeg også, our services ikonene, disse er fra hjemm side services.  */
+/*siden v har samme seksjonen på begge siden, styller jeg dem sammen*/
+.service i, .our-services i {
+    font-size: 1.5em; /* Ikoner størrelse minker på tlf*/
+    display: block; /* Setter ikonene over teskstene */
+    margin-bottom: 10px;
+}
+.service h3 {
+    margin: 5px 0;
+}
+.service p {
+    font-size: 0.9em;
+}
+
+/* styller for kunder seksjonen dvs cleints seksjonen*/
+.kunder {
+    background-color: #FFD700; /*setter gull fargen som beskrevt i demo vedioen*/
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px; /* Plass mellom kontakt skjemaen og cleits seksjonen */
+}
+.kunder h2 {
+    margin-bottom: 40px;
+}
+.kunde img {
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 auto; 
+}
+
+/* contakt skjema*/
+/* denne seksjonen har jeg fått hjelp fra en youtube vedio. har er linken. https://www.youtube.com/watch?v=UAWhbMDBGW4*/
+/* og tips fra w3chools. har er linken nettsiden https://www.w3schools.com/howto/howto_css_contact_form.asp*/
+.contact-form form {
+    display: flex; /*brker flex boks for loyout */
+    flex-direction: column;
+  }
+  .contact-form label {
+    margin-bottom: 5px;
+  }
+  .contact-form input, .contact-form textarea, .contact-form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .contact-form button {
+    background:#e6bd43;
+    color: white;
+    padding: 8px 1px; 
+    font-size: 14px; 
+    width: 40%;
+  }
+
+
+  /* kontakt infor som er aside*/
+  .contact-info {
+    width: 100%; /* Full bredde for mobile */
+    padding: 20px; 
+    box-sizing: border-box; 
+  }
+  .contact-info h2, .contact-info p, .contact-info address {
+    margin-bottom: 15px; /* lager melllom elemetene*/
+  }
+  .contact-info a {
+    color: #007bff; /* gjør den blå sånn at er lett å se om man ønsker å ringe eller kontakte oss*/
+    text-decoration: none; 
+  }
+  /* kontakt container for både kontakt formen og kontaky infor. gjør at jeg får plassere riktig sammen*/
+  .conaktcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/*footer styllen som er det siste jeg skal gjøre på forsiden*/
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 15px 0px; /* Fjerner padding øverst */
+    margin-top: -17px; /* Fjerner margin øverst */
+    margin-bottom: 2px;
+}
+
+/* sosiale medier-lenker */
+footer ul.social-links {
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+}
+
+footer ul.social-links li {
+    margin: 0 10px;
+}
+
+footer ul.social-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Sosialle medier i footer område */
+.social-links {
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+}
+.social-links li {
+    display: inline; /* For å vise ikonene horisontalt */
+    margin: 0 10px; /* Gir litt plass mellom hvert ikon */
+}
+
+.social-links li i {
+    color: white; /* Setter ikonene til hvit farge */
+    font-size: 1.9em; /* Øker størrelsen på ikonene*/
+    margin-bottom: 20px;
+}
+
+
+/* map holderen. kilde https://blog.hubspot.com/website/how-to-embed-google-map-in-html*/
+.map-container iframe {
+    width: 100%;
+    height: 450px; 
+    border: none; /*fjerner border */
+    display: block; 
+  }
+
+
+ /* Har sett en vedio og har fått tips fra denne nettsiden https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+  /* Har er linken til vedioen  https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+ .myBtn {
+    bottom: 20px; 
+    right: 18px; 
+    position: fixed;
+    padding: 15px; 
+    background-color:#e6bd43; 
+    color:#252525; 
+    text-decoration: none; 
+
+    border-radius: 12px; 
+    font-size: 14px; 
+    z-index: 99; /* dette sørger at knappen skal ligger over anter elementer */
+}
+.myBtn:hover {
+    background-color: #16416e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query for større skjermer */
+@media (min-width: 600px) {
+    header {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px; /*Har legger jeg plass at dem ikke fester seg i veggen*/
+        margin-top: 13px;
+    }
+
+    nav ul {
+        margin-top: 0;
+    }
+    nav ul li {
+        display: inline-block;
+        margin: 0 9px;
+        font-weight: 700;
+    }
+
+ /* styles for header */
+    header {
+        flex-direction: row;
+    }
+    /* skyver den litt ned fordi det ser finere ut, kunne har droppet det. */
+    .button {
+        margin-top: 3em;
+    }
+    /* Om oss seksjonen*/
+    .about {
+        display: flex;
+        flex-direction: row; /* gjør elemtene står ved siden av hvarandre */
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .about-image {
+        flex: 0 0 40%; 
+        max-width: 540px; /* maksen bilden kan bli*/
+        margin-left: 45px;
+    }
+    
+    .about-text {
+        flex: 1; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        max-width: 540px; 
+        text-align: center; 
+    }
+    
+    .about-text h3,
+    .about-text p,
+    .about-text .button {
+        margin-top: 10px; /* Legger til litt plass over hvert elementet */
+        width: auto; 
+       text-align: center;
+    }
+    
+    .about-text .button {
+        margin-top: 25px; /* Ekstra plass over knappen , gjør at det ser mer ryddig ut*/
+    }
+
+    /* sekjsonen våres tjernester. hvis du lurer hvorfor jeg brukte our er fordi kunne bruke 'vår':) */
+    .our-tjernester{
+        display: block; 
+        text-align: center; 
+        padding: 20px;
+    }
+    .our-tjernester h2 {
+        margin-bottom: 40px; /* Gir ekstra plass mellom tittelen og artiklene */
+    }
+    .our-tjernester article {
+        display: inline-block; /* Viser artiklene ved siden av hverandre */
+        vertical-align: top; 
+        width: 22%; 
+        margin: 9px; 
+        text-align: left; /* Justerer teksten til venstre innenfor hver artikkel */
+        box-sizing: border-box; 
+        
+    }   
+
+
+    /* Products styles*/
+    /* føest seksjonen som er polifio*/
+    .portfolio-intro h1 {
+        font-size: 3,5em; /* større tekst for større skjermer */
+    }
+    #branding h2, #design h2, #development h2 {
+        color: black;
+        font-weight: 1500; 
+        font-size: 2.5rem; 
+    }
+
+
+    /* styler alrtikkortene for større skjermer */
+    .card {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+    }
+    .card img {
+        width: 100%;  
+        margin-left: 19px;
+    }
+
+
+    /* styler om oss siden, første seksjon, dvs om firma vår*/
+    .company-section {
+        padding: 40px;
+    }
+    .company-info {
+        padding: 40px;
+    }
+
+    /* services seksjonen i om oss dien*/
+    .service {
+        display: inline-block; /* Artiklene ved siden av hverandre */
+        vertical-align: top; /* Artiklene topper ut på samme nivå */
+        width: 22%;
+        margin: 9px; 
+    }
+    .services h2 {
+        margin-bottom: 40px; /* Ekstra plass mellom tittelen og artiklene */
+    }
+    .service i {
+        font-size: 3em; /* gjør ikonene større siden det er stør skjerm */
+    }
+
+    /* clients/kunder sekjonen, */
+    .kunder {
+            text-align: center;
+            padding: 20px;
+    }
+
+    .kunder h2 {
+            margin-bottom: 20px; /* Justert plass mellom tittelen og logoene */
+    }
+
+    .kunde {
+            display: inline-block; /* Logoene for kundene våres vises side om side */
+            width: calc(33.333% - 40px); /* Bredde de skal dekke med marginer */
+            margin: 10px; /* Plass mellom logoer */
+    }
+    .kunde img {
+            max-width: 50%; 
+            height: auto;
+    }
+
+    
+
+    /* kontakt oss omårdwe, contact formen og kontakt info som er aside*/
+    .conaktcontainer {
+        flex-direction: row; 
+    }
+    .contact-form, .contact-info, .contact-form button {
+        width: 50%; /* bestemt denne bredden etter jeg har prøvd mye på inspiser*/
+    }
+    .contact-form button {
+        width: 40%;
+    }
+
+    /* sosila links*/
+    .social-links li i {
+        font-size: 2.5em; /* Øker størrelsen på ikonene for større skjermer */
+    }
+
+    /* footer */
+    footer {
+        display: flex;
+        justify-content: space-between; /* Fordeler elementene */
+        align-items: center; /* Sentrerer elementene vertikalt */
+    }
+
+    .footer-logo {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+    /* styler sosille medie ikonene og legger dem til høtre på stør skjerm. */
+    .footer-social {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        order: 3; 
+    }
+}
